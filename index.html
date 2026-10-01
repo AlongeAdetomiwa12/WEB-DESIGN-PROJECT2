@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westbay school management app</title>
+    <link rel="icon" type="image/png" href="img/logo-YlckUMDA.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo-YlckUMDA.png" alt="" width="50%" class="" />
+        </a>
+      </div>
+
+      <div class="sidebar-nav-links">
+        <nav class="navbar navbar-expand">
+          <ul class="d-flex flex-column gap-3">
+            <li class="nav-item">
+              <a
+                href="index.html" id="active"
+                class="text-decoration-none d-flex gap-2 align-items-center"
+                ><img
+                  src="img/grid-3x3.svg"
+                  alt=""
+                  class="nav-link"
+                />Dashboard</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="staff.html"
+                class="text-decoration-none d-flex gap-2 align-items-center"
+                ><img
+                  src="img/people-fill.svg"
+                  alt=""
+                  class="nav-link"
+                />Staff</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="SchoolResources.html"
+                class="text-decoration-none d-flex gap-2 align-items-center"
+                ><img src="img/book.svg" alt="" class="nav-link" />School
+                Resources</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="Calendar.html"
+                class="text-decoration-none d-flex gap-2 align-items-center"
+                ><img
+                  src="img/calendar4.svg"
+                  alt=""
+                  class="nav-link"
+                />Calendar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="Assessment.html"
+                class="text-decoration-none d-flex gap-2 align-items-center"
+                ><img
+                  src="img/clipboard.svg"
+                  alt=""
+                  class="nav-link"
+                />Assessment</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href=""
+                class="text-decoration-none d-flex gap-2 align-items-center"
+                ><img
+                  src="img/people-fill.svg"
+                  alt=""
+                  class="nav-link"
+                />Student</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href=""
+                class="text-decoration-none d-flex gap-2 align-items-center"
+                ><img src="img/gear.svg" alt="" class="nav-link" />Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <hr class="border-top"/>
+        <h1 class="text-white text-center">Westbay Schools</h1>
+      </div>
+    </div>
+
+    <main class="dashboard-main">
+      <div class="main-top">
+        <h1 class="h5 text-primary">Welcome back Alonge Adetomiwa</h1>
+
+        <div class="main-top-right d-flex gap-2">
+          <div class="search-box input-group">
+            <span class="input-group-text bg-white border-end-0">
+              <img src="img/search.svg" alt="Search" />
+            </span>
+            <input
+              type="search"
+              class="form-control border-start-0"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </div>
+          <img
+            class="profile-avatar"
+            src="img/Business avatar profile black icon_ Man of user vector symbol in trendy flat style isolated on  Male profile people diverse face for social network or web_.jpg"
+            alt="User profile"
+          />
+          <button class="notification-button" type="button" aria-label="Notifications">
+            <img src="img/bell-fill.svg" alt="" />
+          </button>
+        </div>
+
+        
+      </div>
+      <div class=" ">
+          <p class="h4" style="color: #1B1D42 ;">Admin Dashboard</p>
+        <div class="hero-section d-flex flex-row justify-content-between align-items-center ">
+
+          <div class="text">
+            <p class="h5 fw-">Managing Westbay Academy</p>
+            <p class="small">Here is what's happening across Westbay academy today</p>
+          </div>
+
+          <div class="button-hero d-flex flex-row gap-3">
+            <button class="view">View Reports</button>
+          <button class="create">Create event</button>
+          </div>
+        </div>
+
+        <div class="cardi">
+          <div class="card1 border rounded">
+            <p class="h8 fw-50 text-left">Total Students <img src="img/file-person.svg" alt=""></p>
+            <p class="h1 text-center">1184</p>
+          </div>
+          <div class="card2 border rounded">
+            <p class="h8 fw-50">Total Staff <img src="img/people-fill.svg" alt=""></p>
+            <p class="h1 text-center">86</p>
+          </div>
+          <div class="card3 border rounded">
+            <p class="h8 fw-50">Attendance Rate <img src="img/clock.svg" alt=""></p>
+            <p class="h1 text-center">96.7%</p>
+          </div>
+          <div class="card4 border rounded">
+            <p class="h8 fw-50">Upcoming Events <img src="img/calendar-event.svg" alt=""></p>
+            <p class="h1 text-center">7</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="latest-post container w-100 border">
+
+        <div class="latest-post-head">
+          <p class="h5">Recent Activity</p>
+          <p class="h8">View all</p>
+        </div>
+        <ul class="activity-list container">
+          <li class="activity-item">
+            <img src="img/file-person.svg" alt="">
+            <div>
+              <p class="h6">New student enrolled</p>
+              <p>Amina Cole joined Grade 9 &bull; 9:12 AM</p>
+            </div>
+          </li>
+          <li class="activity-item">
+            <img src="img/calendar4.svg" alt="">
+            <div>
+              <p class="h6">Staff meeting scheduled</p>
+              <p>Principal's office &bull; 2:00 PM today</p>
+            </div>
+          </li>
+          <li class="activity-item">
+            <img src="img/clipboard.svg" alt="">
+            <div>
+              <p class="h6">Grade reports submitted</p>
+              <p>Math department &bull; 11:45 AM</p>
+            </div>
+          </li>
+          <li class="activity-item">
+            <img src="img/bell-fill.svg" alt="">
+            <div>
+              <p class="h6">Absence alert</p>
+              <p>3 students absent in Grade 11 &bull; 10:30 AM</p>
+            </div>
+          </li>
+          <li class="activity-item">
+            <img src="img/book.svg" alt="">
+            <div>
+              <p class="h6">Library access updated</p>
+              <p>New book codes issued for Grade 7 &bull; 9:05 AM</p>
+            </div>
+          </li>
+          <li class="activity-item">
+            <img src="img/calendar-event.svg" alt="">
+            <div>
+              <p class="h6">Parent meeting confirmed</p>
+              <p>Room 204 &bull; 4:30 PM today</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
