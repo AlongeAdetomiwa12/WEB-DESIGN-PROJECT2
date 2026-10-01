@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westbay Management App | Staff</title>
+    <link rel="icon" type="image/png" href="img/logo-YlckUMDA.png">
+    <link rel="stylesheet" href="style.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+      <div class="sidebar">
+            <div class="logo">
+               <a href="Dashboard.html">
+                 <img src="img/logo-YlckUMDA.png" alt="" width="50%" class="">
+               </a>
+            </div>
+
+            <div class="sidebar-nav-links">
+                <nav class="navbar navbar-expand">
+                    <ul class="d-flex flex-column gap-3  ">
+                        <li class="nav-item "><a href="Dashboard.html" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/grid-3x3.svg" alt="" class="nav-link">Dashboard</a></li>
+                        <li class="nav-item"><a href="staff.html" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/people-fill.svg" alt="" class="nav-link">Staff</a></li>
+                        <li class="nav-item"><a href="SchoolResources.html" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/book.svg" alt="" class="nav-link">School Resources</a></li>
+                        <li class="nav-item"><a href="" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/calendar4.svg" alt="" class="nav-link">Calendar</a></li>
+                        <li class="nav-item"><a href="" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/clipboard.svg" alt="" class="nav-link">Assessment</a></li>
+                        <li class="nav-item"><a href="" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/people-fill.svg" alt="" class="nav-link">Student</a></li>
+                        <li class="nav-item"><a href="" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/gear.svg" alt="" class="nav-link">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom ">
+                <hr class="border-top"/>
+                <h1 class="text-white text-center ">Westbay Schools</h1>
+            </div>
+    </div>
+
+    <main>
+        <div class="staff-heading">
+            <div class="staff-heading-left">
+                <h2>Staff</h2>
+                <p>Manage Staff and their curriculum.</p>
+            </div>
+
+            <div class="staff-heading-right">
+                <button class="upload" id="uploadStaffButton" type="button"><img src="img/upload.svg" alt="">Import CSV</button>
+                <input id="staffCsvInput" type="file" accept=".csv,text/csv" hidden>
+                <button id="addStaffButton" type="button"><img src="img/plus-lg.svg" alt="">Add Employee</button>
+            </div>
+        </div>
+
+        <!-- <div class="staff-courses">
+            <button><img src="img/people-fill.svg" alt="">Staff</button>
+            <button><img src="img/book.svg" alt="">Courses</button>
+        </div> -->
+
+        <div class="staff-search">
+            <img src="img/search.svg" alt="">
+            <input id="staffSearchInput" type="search" placeholder="Search staff..." aria-label="Search staff">
+        </div>
+
+
+        <p class="staff-message" id="staffMessage" aria-live="polite"></p>
+
+        <div class="staff-table-wrap">
+            <table class="staff-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Portal</th>
+                        <th scope="col" class="staff-actions-heading">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="staffTableBody"></tbody>
+            </table>
+            <p class="staff-empty" id="staffEmptyMessage" hidden>No staff match your search.</p>
+        </div>
+
+        <dialog class="staff-dialog" id="staffDialog">
+            <form id="staffForm">
+                <div class="staff-dialog-heading">
+                    <h2 id="staffDialogTitle">Add employee</h2>
+                    <button class="staff-dialog-close" id="closeStaffDialog" type="button" aria-label="Close">&times;</button>
+                </div>
+                <label for="staffName">Full name</label>
+                <input id="staffName" name="name" autocomplete="name" required>
+                <label for="staffEmail">Email</label>
+                <input id="staffEmail" name="email" type="email" autocomplete="email" required>
+                <label for="staffRole">Role</label>
+                <input id="staffRole" name="role" required>
+                <label for="staffPortal">Portal status</label>
+                <select id="staffPortal" name="portal">
+                    <option value="Active">Active</option>
+                    <option value="Awaiting login" selected>Awaiting login</option>
+                </select>
+                <div class="staff-dialog-actions">
+                    <button class="staff-cancel" id="cancelStaffDialog" type="button">Cancel</button>
+                    <button class="staff-save" id="saveStaffButton" type="submit">Add employee</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+    <script src="Project.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westbay Management App | School Resources</title>
+    <link rel="icon" type="image/png" href="img/logo-YlckUMDA.png">
+    <link rel="stylesheet" href="style.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+      <div class="sidebar">
+            <div class="logo">
+               <a href="Dashboard.html">
+                 <img src="img/logo-YlckUMDA.png" alt="" width="50%" class="">
+               </a>
+            </div>
+
+            <div class="sidebar-nav-links">
+                <nav class="navbar navbar-expand">
+                    <ul class="d-flex flex-column gap-3  ">
+                        <li class="nav-item "><a href="Dashboard.html" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/grid-3x3.svg" alt="" class="nav-link">Dashboard</a></li>
+                        <li class="nav-item"><a href="staff.html" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/people-fill.svg" alt="" class="nav-link">Staff</a></li>
+                        <li class="nav-item"><a href="SchoolResources.html" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/book.svg" alt="" class="nav-link">School Resources</a></li>
+                        <li class="nav-item"><a href="" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/calendar4.svg" alt="" class="nav-link">Calendar</a></li>
+                        <li class="nav-item"><a href="" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/clipboard.svg" alt="" class="nav-link">Assessment</a></li>
+                        <li class="nav-item"><a href="" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/people-fill.svg" alt="" class="nav-link">Student</a></li>
+                        <li class="nav-item"><a href="" class="text-decoration-none d-flex gap-2 align-items-center"><img src="img/gear.svg" alt="" class="nav-link">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom ">
+                <hr class="border-top">
+                <h1 class="text-white text-center ">Westbay Schools</h1>
+            </div>
+    </div>
+
+    <main>
+        <div class="resource-header">
+            <div class="resource-header-left">
+                <p class="h2">School Resources</p>
+            <p class="h8 font-italic">Already built resources made by WestBay Schools</p>
+            </div>
+
+            <div class="resource-header-right">
+                <select name="resources" id="resources">
+                    <option value="All" class="text-center">All Resources</option>
+                    <option value="Lesson">Lessons</option>
+                    <option value="past-que">Past Questions</option>
+                    <option value="assignments">Assignments</option>
+                    <option value="CBT">CBT-based questions</option>
+                    <option value="Requestlog">Request Log</option>
+                </select>
+                <button class="upload" id="resourceUploadButton" type="button"><img src="img/upload.svg" alt="">Add School Resources</button>
+            </div>
+            
+        </div>
+   <div class="staff-search">
+            <img src="img/search.svg" alt="">
+            <input id="resourceSearchInput" type="search" placeholder="Search resources you need" aria-label="Search resources">
+   </div>
+        <input id="resourceFileInput" type="file" accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple hidden>
+        <p id="resourceMessage" class="resource-message" role="status" aria-live="polite"></p>
+        <section id="resourceGrid" class="resource-grid" aria-label="School resource files"></section>
+        <p id="resourceEmptyMessage" class="resource-empty">No resources added yet. Add a PDF or Word document to get started.</p>
+    </main>
+    <script src="Resources.js" defer></script>
+</body>
+</html>
