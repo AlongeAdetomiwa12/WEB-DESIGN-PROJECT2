@@ -199,22 +199,84 @@ button.create{
     background: #1b1d4240;
 }
 
-.latest-post{
+.latest-post {
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
-    height:45vh;
-    border-radius: 10px;
+    min-height: 42vh;
+    border-radius: 22px;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(27, 29, 66, 0.08);
+    box-shadow: var(--shadow);
+    margin-top: 1.5rem;
+    overflow: auto;
+    max-height: 50vh;
 }
 
-.latest-post-head{
+.latest-post-head {
     display: flex;
-    flex: 0 0 auto;
+    align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1.2rem 1.5rem 0.8rem;
+    border-bottom: 1px solid var(--line);
 }
 
+.latest-post-head .h5 {
+    margin: 0;
+    font-weight: 6 00;
+    font-size: 1.2rem;
+}
+
+.latest-post-head .h8 {
+    margin: 0;
+    color: #4d5b96;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 1.25rem 1rem;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item img {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.3rem;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(23%) saturate(1171%) hue-rotate(204deg) brightness(87%) contrast(110%);
+}
+
+.activity-item div {
+    flex: 1;
+}
+
+.activity-item .h6 {
+    margin: 0 0 0.25rem;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.activity-item p:last-child {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.86rem;
+}
 .card1, .card2, .card3, .card4{
     padding: 9px;
 }
@@ -727,13 +789,5 @@ button.create{
 
 @media (max-width: 700px){
     .resource-header,
-    .resource-header-right{
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .resource-header-right select,
-    .resource-header-right .upload{
-        width: 100%;
-    }
+   
 }
